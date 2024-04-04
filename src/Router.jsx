@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "./Outlet/MainLayout";
 import HeroSection from "./AllPages/Landing/HeroSection";
 import LandingPage from "./AllPages/Landing/LandingPage";
+import Authentication from "./AllPages/Authentication/Authentication";
 
 
 const router = createBrowserRouter([
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <LandingPage />,
+            },
+            {
+                path: "/sign-in",
+                element: <Authentication />,
             },
         ],
     },
