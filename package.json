@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mohtasimhadi.github.io/moho-blog-client"
+  "homepage": "https://mohtasimhadi.github.io/moho-blog-client",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
