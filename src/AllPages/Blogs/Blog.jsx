@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import stripHtmlTags from '../../Hooks/html_to_text';
+import { Link } from 'react-router-dom';
 
 
 
@@ -33,7 +34,7 @@ const Blogs = () => {
                     {
                         tree_blogs.map((items, key) => (
                             <li className="w-full mx-auto group sm:max-w-sm" key={key}>
-                                <a href={items.href}>
+                                <Link to={`/blog/${items._id}`}>
                                     <img srcSet={items.featured_image} src={items.featured_image} loading="lazy" alt={items.title} className="w-full rounded-lg" />
                                     <div className="mt-3 space-y-2">
                                         <span className="block text-gray-600 text-sm">{new Date(items.timestamp).toDateString()}</span>
@@ -42,7 +43,7 @@ const Blogs = () => {
                                         </h3>
                                         <p className="text-gray-600 text-sm duration-150 group-hover:text-gray-800">{stripHtmlTags(items.content).split(' ').slice(0, 20).join(' ')}</p>
                                     </div>
-                                </a>
+                                </Link>
                             </li>
                         ))
                     }
