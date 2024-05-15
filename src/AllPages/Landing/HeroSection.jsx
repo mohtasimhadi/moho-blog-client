@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import stripHtmlTags from '../../Hooks/html_to_text';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
 
@@ -44,13 +45,13 @@ const HeroSection = () => {
                             </p>
                         </div>
                         <div className="flex flex-col items-center md:flex-row">
-                            <a
-                                href="/"
+                            <Link
+                                to={`/blog/${feature_blog._id}`}
                                 className="inline-flex items-center justify-center w-full h-12 px-6 mb-3 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto md:mr-4 md:mb-0 bg-black hover:bg-gray-800 focus:shadow-outline focus:outline-none"
                             >
                                 <span className="mr-3">Continue Read</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6" /></svg>
-                            </a>
+                            </Link>
 
                         </div>
                     </div>

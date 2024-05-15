@@ -37,12 +37,15 @@ const SectionsList = ({ items }) => (
 const ManagementSideNav = () => {
     const sub_menu = {
         blog: [{ name: "Manage Blog", href: "/admin/blog-management" },],
-        // project: [{ name: "Manage Project", href: "javascript:void(0)" },],
+
         book: [
             { name: "Manage Book", href: "'/admin/book-management" },
         ],
         publication: [
             { name: "Manage Publication", href: "/admin/publication-management" },
+        ],
+        life_events: [
+            { name: "Life & Events", href: "/admin/life-events" },
         ]
     }
 
@@ -64,10 +67,10 @@ const ManagementSideNav = () => {
                             <Title>Blogs</Title>
                             <SectionsList items={sub_menu.blog} />
                         </div>
-                        {/* <div>
-                            <Title>Project</Title>
-                            <SectionsList items={sub_menu.project} />
-                        </div> */}
+                        <div>
+                            <Title>Life And Events</Title>
+                            <SectionsList items={sub_menu.life_events} />
+                        </div>
                         <div>
                             <Title>Book</Title>
                             <SectionsList items={sub_menu.book} />
